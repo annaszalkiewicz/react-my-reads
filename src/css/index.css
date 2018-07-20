@@ -1,5 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+@import url('https://fonts.googleapis.com/css?family=Tangerine:400,700');
+
+/** COLOR SCHEME
+*
+* PRIMARY COLOR: #026202
+* SECONDARY COLOR: #4d7203
+*
+*/
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
