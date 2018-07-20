@@ -11,13 +11,13 @@ class App extends Component {
         </header>
         <main className="container">
         </main>
+        <footer className="footer">
+          <p className="copyright">Written and coded by <a href="https://mywebgraphicdesign.com">Anna Szalkiewicz</a>
+          </p>
+        </footer>
       </div>
     );
   }
 }
 
 export default App;
-
-/**
- * 
- */

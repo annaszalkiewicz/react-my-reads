@@ -12,14 +12,14 @@
 /* HEADER */
 
 .App-header {
-  padding: 1em;
+  padding: 0 1em 1em 1em;
 }
 
 .App-title {
   font-family: 'Tangerine', cursive;
   font-size: 4em;
   font-weight: 700;
-  border-bottom: solid 1px #000;
+  border-bottom: solid 1px #89b236;
   padding-bottom: 0.3em;
   color: #026202;
 }
@@ -31,8 +31,29 @@
   color: #4d7203;
 }
 
+/* MAIN */
+
 .container {
   width: 100%;
   max-width: 1200px;
   box-shadow: 0 0 20px #333333;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #026202;
+  color: #fff;
+  padding: 2em;
+}
+.copyright {
+  font-size: 1em;
+  font-weight: bold;
+}
+.copyright a {
+  color: #fff;
+  text-decoration: none;
+}
+.copyright a:hover {
+  color: #d0f091;
 }
