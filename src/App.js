@@ -12,8 +12,13 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Header/>
-				<Search/>
-				<main className="container"></main>
+				<Route exact
+					path="/"
+					render={() => (
+						<Search/>
+						// <main className="container"></main>
+					)}
+				/>
 				<Route
 					path="/search"
 					render={() => (
