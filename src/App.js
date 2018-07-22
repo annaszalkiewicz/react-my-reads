@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './js/Header';
+import Footer from './js/Footer';
 import { Link } from 'react-router-dom';
 import './css/App.css';
 // import BooksList from './js/bookList.js';
@@ -17,11 +18,7 @@ class App extends Component {
 						</button>
 					</section>
 				</main>
-				<footer className="footer">
-					<p className="copyright">Written and coded by <Link to="https://mywebgraphicdesign.com">
-					Anna Szalkiewicz</Link>
-					</p>
-				</footer>
+				<Footer/>
 			</div>
 		);
 	}
