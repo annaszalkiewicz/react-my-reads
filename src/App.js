@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './js/Header';
+import Search from './js/Search';
 import Footer from './js/Footer';
-import { Link } from 'react-router-dom';
 import './css/App.css';
 // import BooksList from './js/bookList.js';
 
@@ -10,14 +10,9 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Header/>
+				<Search/>
 				
-				<main className="container">
-					<section className="search" id="search">
-						<button className="submit">
-							<i  className="material-icons">add_circle</i>
-						</button>
-					</section>
-				</main>
+				<main className="container"></main>
 				<Footer/>
 			</div>
 		);

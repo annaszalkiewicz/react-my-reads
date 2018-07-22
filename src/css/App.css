@@ -53,6 +53,24 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+/* SEARCH BUTTON */
+
+.add-book-icon {
+  color: #103210;
+  font-size: 6em;
+  text-shadow: 0 10px 20px #aaaaaa;
+}
+.add-book-icon:hover {
+  cursor: pointer;
+  font-size: 7em;
+  transition: all 0.3s ease;
+}
+.submit {
+  background: none;
+  border: none;
+  color: #002500;
+  margin-right: 2em;
+}
 
 /* MAIN */
 
