@@ -6,7 +6,7 @@ import '../css/App.css';
 class Search extends Component {
 	render () {
 		return (
-			<Link to='./searchPage' className='add-book'>
+			<Link to='./search' className='add-book'>
 				<button className="submit">
 					<i className="material-icons add-book-icon">add_circle</i>
 				</button>
