@@ -72,6 +72,32 @@
   margin-right: 2em;
 }
 
+/* SEARCH FORM */
+
+.search-form {
+  width: 95%;
+  display: block;
+  margin: 1em auto;
+}
+.input-label {
+  font-size: 1.5em;
+}
+.search-input {
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px #aaa;
+  padding: 1em;
+  margin-top: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+::placeholder {
+  font-size: 1em !important;
+  font-style: italic;
+  font-weight: 300;
+  color: #aaa;
+}
+
 /* MAIN */
 
 .container {
