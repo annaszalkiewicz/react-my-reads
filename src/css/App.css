@@ -109,7 +109,7 @@
 
 /* BOOK DETAILS */
 
-.book-list {
+.books-list {
   display: flex;
   flex-direction: row;
   justify-content: center;
