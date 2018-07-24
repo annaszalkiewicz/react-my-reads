@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
-import { search, getAll } from '../utils/BooksAPI';
+import { search } from '../utils/BooksAPI';
 import '../css/App.css';
 
 class SearchPage extends Component {
@@ -10,11 +10,7 @@ class SearchPage extends Component {
     query: '',
     foundBooks: [],
   }
-  componentDidMount = (query) => {
-    getAll(query).then((books) => {
-      this.setState({ books });
-    });
-  }
+
   updateQuery = (query) => {
     this.setState({ query: query });
 
