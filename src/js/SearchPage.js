@@ -21,15 +21,15 @@ class SearchPage extends Component {
     if (query) {
       search(query).then((foundBooks) => {
         if (foundBooks.length) {
-          this.setState({foundBooks})
+          this.setState({ foundBooks })
         }
         else {
-          this.setState({foundBooks: []});
+          this.setState({ foundBooks: [] });
         }
       })
     }
     else {
-      this.setState({foundBooks: []});
+      this.setState({ foundBooks: [] });
     }
   }
 
@@ -39,6 +39,7 @@ class SearchPage extends Component {
   render() {
     let query = this.state.query;
     let foundBooks = this.state.foundBooks;
+
 
     return (
 
@@ -58,9 +59,24 @@ class SearchPage extends Component {
         {foundBooks.length !== 0 && query.length !== 0 && (
           <section id="found-books" className="found-books">
             <ul className="books-list">
-              {foundBooks.map((book) => (
-                <li key={book.id}>
-                  {book.title}
+              {foundBooks.map((books) => (
+                <li key={books.id} className="book-item">
+                  <div className="image-container">
+                    <img src={books.imageLinks.thumbnail} alt="Cover Page" className="book-image"/>
+                  </div>
+                  <div className="book-description">
+                    <h2 className="book-author">{books.authors}</h2>
+                    <h2 className="book-title">{books.title}</h2>
+                    <div className="buttons-container">
+                      <button className="reset">
+                        <i className="material-icons view-details">info</i>
+                      </button>
+                      <button className="reset">
+                        <i className="material-icons more">more_vert</i>
+                      </button>
+                    </div>
+                    
+                  </div>
                 </li>
               ))}
             </ul>
