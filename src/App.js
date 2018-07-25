@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Header from './js/Header';
-import Search from './js/Search';
 import Footer from './js/Footer';
+import MainPage from './js/MainPage';
 import SearchPage from './js/SearchPage';
 import './css/App.css';
-// import BooksList from './js/bookList.js';
 
 class App extends Component {
 	render() {
@@ -15,8 +14,7 @@ class App extends Component {
 				<Route exact
 					path="/"
 					render={() => (
-						<Search/>
-						// <main className="container"></main>
+						<MainPage/>
 					)}
 				/>
 				<Route
