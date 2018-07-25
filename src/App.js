@@ -11,6 +11,7 @@ class App extends Component {
 	state = {
 		books: [],
 		foundBooks: [],
+		currentBooks: [],
 		query: ''
 	}
 
@@ -23,6 +24,7 @@ class App extends Component {
 	render() {
 		let books = this.state.books;
 		let foundBooks = this.state.foundBooks;
+		let currentBooks = this.state.currentBooks;
 		let query =  this.state.query;
 		return (
 			<div className="App">
@@ -30,7 +32,11 @@ class App extends Component {
 				<Route exact
 					path="/"
 					render={() => (
-						<MainPage/>
+						<MainPage
+						currentBooks = {currentBooks}
+						books = {books}
+						query = {query}
+						/>
 					)}
 				/>
 				<Route
