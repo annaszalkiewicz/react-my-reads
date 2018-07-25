@@ -27,53 +27,52 @@ class MainPage extends Component {
 			<main>
 				< Search />
 
-	<section id="currently-reading" className="currently-reading">
-		<h2 className="shelf-heading">Currently Reading</h2>
-		<ul className="books-list">
-			{currentBooks.map((books) => (
-				<li key={books.id} className="book-item">
+				<section id="currently-reading" className="shelf">
+					<h2 className="shelf-heading">Currently Reading</h2>
+					<ul className="books-list">
+						{currentBooks.map((books) => (
+							<li key={books.id} className="book-item">
 
-				{books.shelf === 'currentlyReading' && (
-					<BooksList
-						books = {books}
-					/>
-				)}
-					
-				</li>
-			))}
-		</ul>
-	</section>
+								{books.shelf === 'currentlyReading' && (
+									<BooksList
+										books={books}
+									/>
+								)}
 
-	<section id="currently-reading" className="currently-reading">
-		<h2 className="shelf-heading">Want To Read</h2>
-		<ul className="books-list">
-			{currentBooks.map((books) => (
-				<li key={books.id} className="book-item">
-					{books.shelf === 'wantToRead' && (
-					<BooksList
-						books = {books}
-					/>
-				)}
-				</li>
-			))}
-		</ul>
-	</section>
+							</li>
+						))}
+					</ul>
+				</section>
 
-	<section id="currently-reading" className="currently-reading">
-		<h2 className="shelf-heading">Read</h2>
-		<ul className="books-list">
-			{currentBooks.map((books) => (
-				<li key={books.id} className="book-item">
-					{books.shelf === 'read' && (
-					<BooksList
-						books = {books}
-					/>
-				)}
-				</li>
-			))}
-		</ul>
-	</section>
+				<section id="want-to-read" className="shelf">
+					<h2 className="shelf-heading">Want To Read</h2>
+					<ul className="books-list">
+						{currentBooks.map((books) => (
+							<li key={books.id} className="book-item">
+								{books.shelf === 'wantToRead' && (
+									<BooksList
+										books={books}
+									/>
+								)}
+							</li>
+						))}
+					</ul>
+				</section>
 
+				<section id="read" className="shelf">
+					<h2 className="shelf-heading">Read</h2>
+					<ul className="books-list">
+						{currentBooks.map((books) => (
+							<li key={books.id} className="book-item">
+								{books.shelf === 'read' && (
+									<BooksList
+										books={books}
+									/>
+								)}
+							</li>
+						))}
+					</ul>
+				</section>
 
 			</main>
 		);
