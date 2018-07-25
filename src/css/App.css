@@ -109,13 +109,13 @@
 
 /* BOOK DETAILS */
 
-.books-list {
+.books-item {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
-.book-item {
+.book-container {
   display: flex;
   flex-direction: row;
   width: 300px;
@@ -188,4 +188,15 @@
 }
 .copyright a:hover {
   color: #d0f091;
+}
+
+@media screen and (min-width: 400px) {
+  .App-header {
+    height: 60vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  .App-header {
+    height: 320px;
+  }
 }

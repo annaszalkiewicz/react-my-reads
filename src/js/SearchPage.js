@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BooksList from './BooksList';
 // import PropTypes from 'prop-types';
 import { search } from '../utils/BooksAPI';
 import '../css/App.css';
@@ -36,7 +37,6 @@ class SearchPage extends Component {
     let query = this.state.query;
     let foundBooks = this.state.foundBooks;
 
-
     return (
 
       <main>
@@ -55,27 +55,19 @@ class SearchPage extends Component {
         {foundBooks.length !== 0 && query.length !== 0 && (
           <section id="found-books" className="found-books">
             <ul className="books-list">
-              {foundBooks.map((books) => (
-                <li key={books.id} className="book-item">
-                  <div className="image-container">
-                    <img src={books.imageLinks.thumbnail} alt="Cover Page" className="book-image"/>
-                  </div>
-                  <div className="book-description">
-                    <h2 className="book-author">{books.authors}</h2>
-                    <h2 className="book-title">{books.title}</h2>
-                    <div className="buttons-container">
-                      <button className="reset">
-                        <i className="material-icons view-details">info</i>
-                      </button>
-                      <button className="reset">
-                        <i className="material-icons more">more_vert</i>
-                      </button>
-                    </div>
-                    
-                  </div>
-                </li>
-              ))}
-            </ul>
+				{foundBooks.map((books) => (
+					<li key={books.id} className="book-item">
+						<BooksList
+              books = {books}
+              query = {query}
+              key = {books.id}
+              author = {books.authors}
+              title = {books.title}
+              image = {books.imageLinks.thumbnail}
+            />
+					</li>
+				))}
+			</ul>
           </section>
         )}
 
