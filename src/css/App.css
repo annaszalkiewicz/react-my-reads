@@ -108,7 +108,12 @@
 }
 
 /* BOOK DETAILS */
-
+.books-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .books-item {
   display: flex;
   flex-direction: row;

@@ -7,6 +7,12 @@ import '../css/App.css';
 
 class SearchPage extends Component {
 
+	state = {
+    query: '',
+		books: [],
+		foundBooks: []
+}
+
   updateQuery = (query) => {
     this.setState({ query: query });
 
@@ -30,8 +36,8 @@ class SearchPage extends Component {
   }
 
 	render() {
-    let query = this.props.query;
-    let foundBooks = this.props.foundBooks;
+    let query = this.state.query;
+    let foundBooks = this.state.foundBooks;
 
 		return (
 
@@ -75,7 +81,7 @@ class SearchPage extends Component {
 }
 
 SearchPage.propTypes = {
-	books: PropTypes.object.isRequired,
+	books: PropTypes.array.isRequired,
 	foundBooks: PropTypes.array.isRequired,
 	query: PropTypes.string.isRequired
 };

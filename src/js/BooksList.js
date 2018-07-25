@@ -4,8 +4,12 @@ import '../css/App.css';
 
 class BooksList extends Component {
 
+	state = {
+		books: {}
+	}
+
 	render() {
-		let books = this.props;
+		let books = this.props.books;
 
 		return (
 			<div className="book-container">

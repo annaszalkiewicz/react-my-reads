@@ -9,9 +9,15 @@ import './css/App.css';
 
 class App extends Component {
 	state = {
-		books: {},
+		books: [],
 		foundBooks: [],
 		query: ''
+	}
+
+	componentDidMount = (query) => {
+	  BooksAPI.getAll(query).then((books) => {
+	  this.setState({ books });
+	  });
 	}
 
 	render() {
