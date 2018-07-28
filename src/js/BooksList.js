@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Shelf from './Shelf';
 import PropTypes from 'prop-types';
 import '../css/App.css';
 
@@ -10,6 +11,7 @@ class BooksList extends Component {
 
 	render() {
 		let books = this.props.books;
+		let changeShelf = this.props;
 
 		return (
 			<div className="book-container">
@@ -23,9 +25,10 @@ class BooksList extends Component {
 						<button className="reset">
 							<i className="material-icons view-details">info</i>
 						</button>
-						<button className="reset">
-							<i className="material-icons more">more_vert</i>
-						</button>
+						<Shelf
+							books={books}
+							changeShelf={changeShelf}
+						/>
 					</div>
 				</div>
 			</div>

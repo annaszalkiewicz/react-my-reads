@@ -194,6 +194,18 @@
 .more {
   font-size: 48px;
 }
+.shelf-changer {
+  background-image: url('../img/more-icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: 15px 30px; */
+}
+.shelf-changer select {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
 
 /* FOOTER */
 

@@ -20,6 +20,13 @@ class App extends Component {
 	  this.setState({ books });
 	  });
 	}
+	
+	changeShelf = (book, shelf) => {
+		BooksAPI.update(book, shelf);
+    BooksAPI.getAll().then((books) => {
+      this.setState({ currentBooks: books })
+})
+	}
 
 	render() {
 		let books = this.state.books;
@@ -36,6 +43,7 @@ class App extends Component {
 						currentBooks = {currentBooks}
 						books = {books}
 						query = {query}
+						changeShelf = {this.changeShelf}
 						/>
 					)}
 				/>
@@ -46,6 +54,7 @@ class App extends Component {
 							books = {books}
 							foundBooks = {foundBooks}
 							query = {query}
+							changeShelf = {this.changeShelf}
 						/>
 					)}
 				/>

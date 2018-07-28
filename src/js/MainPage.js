@@ -10,7 +10,6 @@ class MainPage extends Component {
 		query: '',
 		books: [],
 		currentBooks: []
-		// shelf: ['currentlyReading', 'wantToRead', 'read'],
 	}
 	componentDidMount(query) {
 
@@ -21,7 +20,8 @@ class MainPage extends Component {
 	render() {
 
 		let currentBooks = this.state.currentBooks;
-		let books = this.props;
+		let changeShelf = this.props;
+
 
 		return (
 			<main>
@@ -36,6 +36,7 @@ class MainPage extends Component {
 								{books.shelf === 'currentlyReading' && (
 									<BooksList
 										books={books}
+										changeShelf={changeShelf}
 									/>
 								)}
 
@@ -52,6 +53,7 @@ class MainPage extends Component {
 								{books.shelf === 'wantToRead' && (
 									<BooksList
 										books={books}
+										changeShelf={changeShelf}
 									/>
 								)}
 							</li>
@@ -67,6 +69,7 @@ class MainPage extends Component {
 								{books.shelf === 'read' && (
 									<BooksList
 										books={books}
+										changeShelf={changeShelf}
 									/>
 								)}
 							</li>
