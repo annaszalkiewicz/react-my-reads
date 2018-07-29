@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../css/App.css';
 import '../img/more-icon.svg';
-import BooksList from './BooksList';
 
 
 class Shelf extends Component {

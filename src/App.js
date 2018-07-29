@@ -4,7 +4,7 @@ import Header from './js/Header';
 import Footer from './js/Footer';
 import MainPage from './js/MainPage';
 import SearchPage from './js/SearchPage';
-import * as BooksAPI from '../src/utils/BooksAPI'
+import * as BooksAPI from './utils/BooksAPI';
 import './css/App.css';
 
 class App extends Component {
@@ -33,6 +33,7 @@ class App extends Component {
 		let foundBooks = this.state.foundBooks;
 		let currentBooks = this.state.currentBooks;
 		let query =  this.state.query;
+
 		return (
 			<div className="App">
 				<Header/>
@@ -57,7 +58,7 @@ class App extends Component {
 							changeShelf = {this.changeShelf}
 						/>
 					)}
-				/>
+				/>	
 				<Footer/>
 			</div>
 		);
