@@ -49,7 +49,9 @@ class BooksList extends Component {
 							className="Modal"
 							overlayClassName="Overlay"
 						>
-							<button onClick={this.closeModal}>close</button>
+							<button className="close-button" onClick={this.closeModal}>
+								<i className="material-icons">close</i>
+							</button>
 							<div className="details-container">
 								<div className="details-left">
 									<div className="details-image-container">
@@ -57,34 +59,35 @@ class BooksList extends Component {
 									</div>
 									<h2 className="category">{books.categories}</h2>
 									<span className="rating">Rating: {books.averageRating}</span>
-									<a target="_blank" href={books.previewLink}>
-										<button className="preview">View Preview</button>
-									</a>
+									<button className="preview"><a target="_blank" href={books.previewLink}>View Preview</a></button>
+									
+										
+									
 								</div>
 								<div className="details-right">
 									<h2 className="details-header">{books.title}</h2>
 									<h3 className="details-subtitle">{books.subtitle}</h3>
 
-									<table>
+									<table className="details-table">
 										<tbody>
 											<tr>
-												<td>Author:</td>
+												<td className="table-title">Author:</td>
 												<td>{books.authors.join(', ')}</td>
 											</tr>
 											<tr>
-												<td>Publisher:</td>
+												<td className="table-title">Publisher:</td>
 												<td>{books.publisher}</td>
 											</tr>
 											<tr>
-												<td>Published:</td>
+												<td className="table-title">Published:</td>
 												<td>{books.publishedDate}</td>
 											</tr>
 											<tr>
-												<td>Pages:</td>
+												<td className="table-title">Pages:</td>
 												<td>{books.pageCount}</td>
 											</tr>
 											<tr>
-												<td>Language:</td>
+												<td className="table-title">Language:</td>
 												<td>{books.language}</td>
 											</tr>
 										</tbody>
