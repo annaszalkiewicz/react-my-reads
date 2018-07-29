@@ -15,24 +15,27 @@ class App extends Component {
 		query: ''
 	}
 
-	componentDidMount = (query) => {
-	  BooksAPI.getAll(query).then((books) => {
-	  this.setState({ books });
-	  });
+	componentDidMount = () => {
+		this.updateBooks();
+	}
+
+	updateBooks = () => {
+		BooksAPI.getAll().then((books) => {
+			this.setState({ books })
+		});
 	}
 	
 	changeShelf = (book, shelf) => {
-		BooksAPI.update(book, shelf);
-    BooksAPI.getAll().then((books) => {
-      this.setState({ currentBooks: books })
-})
+		BooksAPI.update(book, shelf).then(books => {
+			BooksAPI.getAll().then((books) => {
+				this.setState({ books })
+				{console.log(this.state.books)}
+			});
+		})
 	}
 
 	render() {
-		let books = this.state.books;
-		let foundBooks = this.state.foundBooks;
-		let currentBooks = this.state.currentBooks;
-		let query =  this.state.query;
+		const { books, query, foundBooks } = this.state;
 
 		return (
 			<div className="App">
@@ -41,9 +44,7 @@ class App extends Component {
 					path="/"
 					render={() => (
 						<MainPage
-						currentBooks = {currentBooks}
 						books = {books}
-						query = {query}
 						changeShelf = {this.changeShelf}
 						/>
 					)}

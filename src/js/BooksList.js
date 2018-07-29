@@ -10,7 +10,6 @@ class BooksList extends Component {
 		super();
 
 		this.state = {
-			books: {},
 			modalIsOpen: false
 		};
 
@@ -27,17 +26,16 @@ class BooksList extends Component {
 	}
 
 	render() {
-		let books = this.props.books;
-		let changeShelf = this.props;
+		const { book, changeShelf } = this.props;
 
 		return (
 			<div className="book-container">
 				<div className="image-container">
-					<img src={books.imageLinks.thumbnail} alt="Cover Page" className="book-image" />
+					<img src={book.imageLinks.thumbnail} alt="Cover Page" className="book-image" />
 				</div>
 				<div className="book-description">
-					<h2 className="book-author">{books.authors.join(', ')}</h2>
-					<h2 className="book-title">{books.title}</h2>
+					<h2 className="book-author">{book.authors.join(', ')}</h2>
+					<h2 className="book-title">{book.title}</h2>
 					<div className="buttons-container">
 						<button className="details" onClick={this.openModal}>
 							<i className="material-icons info-icon">info</i>
@@ -55,52 +53,52 @@ class BooksList extends Component {
 							<div className="details-container">
 								<div className="details-left">
 									<div className="details-image-container">
-										<img src={books.imageLinks.thumbnail} alt="Cover Page" className="details-image" />
+										<img src={book.imageLinks.thumbnail} alt="Cover Page" className="details-image" />
 									</div>
-									<h2 className="category">{books.categories}</h2>
-									<span className="rating">Rating: {books.averageRating}</span>
-									<button className="preview"><a target="_blank" href={books.previewLink}>View Preview</a></button>
+									<h2 className="category">{book.categories}</h2>
+									<span className="rating">Rating: {book.averageRating}</span>
+									<button className="preview"><a target="_blank" href={book.previewLink}>View Preview</a></button>
 									
 										
 									
 								</div>
 								<div className="details-right">
-									<h2 className="details-header">{books.title}</h2>
-									<h3 className="details-subtitle">{books.subtitle}</h3>
+									<h2 className="details-header">{book.title}</h2>
+									<h3 className="details-subtitle">{book.subtitle}</h3>
 
 									<table className="details-table">
 										<tbody>
 											<tr>
 												<td className="table-title">Author:</td>
-												<td>{books.authors.join(', ')}</td>
+												<td>{book.authors.join(', ')}</td>
 											</tr>
 											<tr>
 												<td className="table-title">Publisher:</td>
-												<td>{books.publisher}</td>
+												<td>{book.publisher}</td>
 											</tr>
 											<tr>
 												<td className="table-title">Published:</td>
-												<td>{books.publishedDate}</td>
+												<td>{book.publishedDate}</td>
 											</tr>
 											<tr>
 												<td className="table-title">Pages:</td>
-												<td>{books.pageCount}</td>
+												<td>{book.pageCount}</td>
 											</tr>
 											<tr>
 												<td className="table-title">Language:</td>
-												<td>{books.language}</td>
+												<td>{book.language}</td>
 											</tr>
 										</tbody>
 									</table>
 
 								</div>
 							</div>
-							<div className="description">{books.description}</div>
+							<div className="description">{book.description}</div>
 
 						</Modal>
 
 						<Shelf
-							books={books}
+							book={book}
 							changeShelf={changeShelf}
 						/>
 					</div>

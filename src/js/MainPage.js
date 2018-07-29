@@ -1,41 +1,32 @@
 import React, { Component } from 'react';
-import Search from '../js/Search';
+import { Link } from 'react-router-dom';
 import BooksList from './BooksList';
-import { getAll } from '../utils/BooksAPI';
 
 import '../css/App.css';
 
 class MainPage extends Component {
-	state = {
-		query: '',
-		books: [],
-		currentBooks: []
-	}
-	componentDidMount(query) {
 
-		getAll(query).then((books) => {
-			this.setState({ currentBooks: books });
-		});
-	}
 	render() {
 
-		let currentBooks = this.state.currentBooks;
-		let changeShelf = this.props;
-
+		const { books, changeShelf } = this.props;
 
 		return (
 			<main>
-				< Search />
+				<Link to='./search' className='add-book'>
+					<button className="submit">
+						<i className="material-icons add-book-icon">add_circle</i>
+					</button>
+				</Link>
 
 				<section id="currently-reading" className="shelf">
 					<h2 className="shelf-heading">Currently Reading</h2>
 					<ul className="books-list">
-						{currentBooks.map((books) => (
-							<li key={books.id} className="book-item">
+						{books.map((book) => (
+							<li key={book.id} className="book-item">
 
-								{books.shelf === 'currentlyReading' && (
+								{book.shelf === 'currentlyReading' && (
 									<BooksList
-										books={books}
+										book={book}
 										changeShelf={changeShelf}
 									/>
 								)}
@@ -48,11 +39,11 @@ class MainPage extends Component {
 				<section id="want-to-read" className="shelf">
 					<h2 className="shelf-heading">Want To Read</h2>
 					<ul className="books-list">
-						{currentBooks.map((books) => (
-							<li key={books.id} className="book-item">
-								{books.shelf === 'wantToRead' && (
+						{books.map((book) => (
+							<li key={book.id} className="book-item">
+								{book.shelf === 'wantToRead' && (
 									<BooksList
-										books={books}
+										book={book}
 										changeShelf={changeShelf}
 									/>
 								)}
@@ -64,11 +55,11 @@ class MainPage extends Component {
 				<section id="read" className="shelf">
 					<h2 className="shelf-heading">Read</h2>
 					<ul className="books-list">
-						{currentBooks.map((books) => (
-							<li key={books.id} className="book-item">
-								{books.shelf === 'read' && (
+						{books.map((book) => (
+							<li key={book.id} className="book-item">
+								{book.shelf === 'read' && (
 									<BooksList
-										books={books}
+										book={book}
 										changeShelf={changeShelf}
 									/>
 								)}

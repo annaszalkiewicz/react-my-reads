@@ -5,16 +5,12 @@ import '../img/more-icon.svg';
 
 class Shelf extends Component {
 
-	state = {
-		value: []
-	}
-
 	render() {
-		let changeShelf = this.props;
-		let currentBook = this.props;
+		const { book, changeShelf } = this.props;
+
 		return (
 			<div className="shelf-changer">
-				<select value={currentBook.value} onChange={(event) => changeShelf(event.target.value)}>
+				<select value={book.shelf} onChange={(event) => changeShelf(book, event.target.value)}>
 					<option value="move" disabled>Move to...</option>
 					<option value="currentlyReading">Currently Reading</option>
 					<option value="wantToRead">Want to Read</option>
