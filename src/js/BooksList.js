@@ -40,7 +40,7 @@ class BooksList extends Component {
 					<h2 className="book-title">{books.title}</h2>
 					<div className="buttons-container">
 						<button className="details" onClick={this.openModal}>
-							<i className="material-icons">info</i>
+							<i className="material-icons info-icon">info</i>
 						</button>
 						<Modal
 							isOpen={this.state.modalIsOpen}
