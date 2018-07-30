@@ -10,7 +10,7 @@ class Shelf extends Component {
 
 		return (
 			<div className="shelf-changer">
-				<select value={book.shelf} onChange={(event) => changeShelf(book, event.target.value)}>
+				<select value={book.shelf || 'none'} onChange={(event) => changeShelf(book, event.target.value)}>
 					<option value="move" disabled>Move to...</option>
 					<option value="currentlyReading">Currently Reading</option>
 					<option value="wantToRead">Want to Read</option>

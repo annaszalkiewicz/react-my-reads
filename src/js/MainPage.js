@@ -21,16 +21,12 @@ class MainPage extends Component {
 				<section id="currently-reading" className="shelf">
 					<h2 className="shelf-heading">Currently Reading</h2>
 					<ul className="books-list">
-						{books.map((book) => (
+						{books.filter(book => book.shelf === 'currentlyReading').map((book) => (
 							<li key={book.id} className="book-item">
-
-								{book.shelf === 'currentlyReading' && (
-									<BooksList
-										book={book}
-										changeShelf={changeShelf}
-									/>
-								)}
-
+								<BooksList
+									book={book}
+									changeShelf={changeShelf}
+								/>
 							</li>
 						))}
 					</ul>
@@ -39,14 +35,12 @@ class MainPage extends Component {
 				<section id="want-to-read" className="shelf">
 					<h2 className="shelf-heading">Want To Read</h2>
 					<ul className="books-list">
-						{books.map((book) => (
+						{books.filter(book => book.shelf === 'wantToRead').map((book) => (
 							<li key={book.id} className="book-item">
-								{book.shelf === 'wantToRead' && (
-									<BooksList
-										book={book}
-										changeShelf={changeShelf}
-									/>
-								)}
+								<BooksList
+									book={book}
+									changeShelf={changeShelf}
+								/>
 							</li>
 						))}
 					</ul>
@@ -55,14 +49,12 @@ class MainPage extends Component {
 				<section id="read" className="shelf">
 					<h2 className="shelf-heading">Read</h2>
 					<ul className="books-list">
-						{books.map((book) => (
+						{books.filter(book => book.shelf === 'read').map((book) => (
 							<li key={book.id} className="book-item">
-								{book.shelf === 'read' && (
-									<BooksList
-										book={book}
-										changeShelf={changeShelf}
-									/>
-								)}
+								<BooksList
+									book={book}
+									changeShelf={changeShelf}
+								/>
 							</li>
 						))}
 					</ul>

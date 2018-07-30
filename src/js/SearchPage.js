@@ -10,7 +10,7 @@ class SearchPage extends Component {
 	state = {
     query: '',
 		books: [],
-		foundBooks: []
+		foundBooks: [],
 }
 
   updateQuery = (query) => {
@@ -19,7 +19,8 @@ class SearchPage extends Component {
     if (query) {
       BooksAPI.search(query).then((foundBooks) => {
         if (foundBooks.length) {
-          this.setState({ foundBooks })
+					this.setState({ foundBooks })
+					foundBooks.map(book => (this.state.books.filter((b) => b.id === book.id).map(b => book.shelf = b.shelf)))
         }
         else {
           this.setState({ foundBooks: [] });
@@ -36,8 +37,7 @@ class SearchPage extends Component {
   }
 
 	render() {
-    let query = this.state.query;
-    let foundBooks = this.state.foundBooks;
+		const { query, foundBooks } = this.state;
 
 		return (
 
@@ -57,10 +57,10 @@ class SearchPage extends Component {
 				{foundBooks.length !== 0 && query.length !== 0 && (
 					<section id="found-books" className="found-books">
 						<ul className="books-list">
-							{foundBooks.map((books) => (
-								<li key={books.id} className="book-item">
+							{foundBooks.map((book) => (
+								<li key={book.id} className="book-item">
 									<BooksList
-										books = {books}
+										book = {book}
 									/>
 								</li>
 							))}
