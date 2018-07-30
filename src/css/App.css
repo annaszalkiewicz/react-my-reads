@@ -77,6 +77,25 @@
 
 /* SEARCH FORM */
 
+.close-search {
+	position: absolute;
+	left: 1em;
+}
+.close-search:hover {
+	cursor: pointer;
+	color: #000;
+}
+.arrow-back {
+	font-size: 48px;
+	color: rgba(0,0,0,0.5);
+}
+.arrow-back:hover {
+	color: #000;
+}
+.search-form {
+	position: relative;
+}
+
 .search-form {
 	width: 95%;
 	display: block;

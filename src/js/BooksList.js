@@ -6,8 +6,8 @@ import '../css/App.css';
 
 class BooksList extends Component {
 
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			modalIsOpen: false

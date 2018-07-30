@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BooksList from './BooksList';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import * as BooksAPI from '../utils/BooksAPI'
 
 import '../css/App.css';
@@ -42,6 +43,12 @@ class SearchPage extends Component {
 		return (
 
 			<main>
+				<Link
+					to='/'
+					className='close-search'
+				>
+					<i className="material-icons arrow-back">arrow_back</i>
+				</Link>
 				<form className="search-form">
 					<label htmlFor="search-input" className="input-label">Look for new book:</label>
 					<input
