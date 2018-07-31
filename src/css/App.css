@@ -387,7 +387,39 @@ select {
 	padding: 1em;
 	text-align: justify;
 }
+@media screen and (min-width: 600px) {
+	.tabs {
+		margin-top: 1em;
+	}
+	.tab-header {
+		display: inline-block;
+		width: 45%;
+		margin: 0.5em;
+	}
+	.details-container {
+		flex-direction: row;
+	}
+	.details-left {
+		width: 140px;
+	}
+	.details-right {
+		width: calc(100% - 140px);
+	}
+	.description {
+		margin: 1em;
+	}
+}
+/* Fix for Nokia Lumia and other mobiles and landscape orientation */
 
+@media screen and (width: 640px) and (height: 360px) {
+	.App-header {
+		height: 360px;
+	}
+	.submit {
+		right: 1em;
+    top: 23em;
+	}
+}
 @media screen and (min-width: 768px) {
 	.App-header {
 		height: 320px;
