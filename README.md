@@ -37,6 +37,7 @@ You can change port by editing `package.json` file. In line 16 `"start": " set P
 * [React DOM](https://www.npmjs.com/package/react-dom)
 * [React Router DOM](https://www.npmjs.com/package/react-router-dom)
 * [React Modal](https://www.npmjs.com/package/react-modal)
+* [React Tabs](https://github.com/reactjs/react-tabs)
 * [Prop-Types](https://www.npmjs.com/package/prop-types)
 * [Font Montserrat on Google](https://fonts.google.com/specimen/Montserrat)
 * [Font Tangerine on Google](https://fonts.google.com/specimen/Tangerine)
