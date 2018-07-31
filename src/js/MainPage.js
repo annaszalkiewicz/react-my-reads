@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import BooksList from './BooksList';
 // eslint-disable-next-line 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import PropTypes from 'prop-types';
 
 import '../css/App.css';
 
@@ -75,6 +76,13 @@ const MainPage = ({books, changeShelf}) => {
 		</main>
 	);
 
+};
+
+MainPage.propTypes = {
+	books: PropTypes.array.isRequired,
+	book: PropTypes.object.isRequired,
+	changeShelf: PropTypes.func.isRequired,
+	currentShelf: PropTypes.string.isRequired
 };
 
 export default MainPage;

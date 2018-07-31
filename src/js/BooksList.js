@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Shelf from './Shelf';
 import Modal from 'react-modal';
+import PropTypes from 'prop-types';
 import '../img/info-icon.svg';
 import Placeholder from '../img/placeholder.png';
 import '../css/App.css';
@@ -108,5 +109,11 @@ class BooksList extends Component {
 		);
 	}
 }
+
+BooksList.propTypes = {
+	book: PropTypes.object.isRequired,
+	changeShelf: PropTypes.func.isRequired,
+	currentShelf: PropTypes.string.isRequired
+};
 
 export default BooksList;

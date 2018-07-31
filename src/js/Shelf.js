@@ -1,5 +1,7 @@
 // eslint-disable-next-line
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import '../css/App.css';
 import '../img/more-icon.svg';
 
@@ -17,6 +19,12 @@ const Shelf = ({changeShelf, currentShelf, book}) => {
 		</div>
 	);
 
+};
+
+Shelf.propTypes = {
+	book: PropTypes.object.isRequired,
+	changeShelf: PropTypes.func.isRequired,
+	currentShelf: PropTypes.string.isRequired
 };
 
 export default Shelf;
