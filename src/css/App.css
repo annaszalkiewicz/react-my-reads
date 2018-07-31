@@ -71,7 +71,7 @@
 	border: none;
 	color: #00260D;
 	right: 2em;
-	top: 33em;
+	top: 32em;
 	z-index: 1;
 }
 
@@ -79,14 +79,14 @@
 
 .close-search {
 	position: absolute;
-	left: 1em;
+	left: 0;
 }
 .close-search:hover {
 	cursor: pointer;
 	color: #000;
 }
 .arrow-back {
-	font-size: 48px;
+	font-size: 36px;
 	color: rgba(0,0,0,0.5);
 }
 .arrow-back:hover {
@@ -134,13 +134,13 @@
 .tab-header {
 	text-align: center;
 	list-style-type: none;
-	display: inline-block;
-	width: 30%;
+	display: block;
+	width: 95%;
 	background-color: #185C2F;
 	color: #fff;
 	font-size: 1.5em;
 	padding: 1em;
-	margin: 0.5em;
+	margin: 0.5em auto;
 	box-shadow: 0 10px 20px #aaa;
 }
 .tab-header:hover {
@@ -216,15 +216,18 @@
 	width: 50%;
 }
 .view-details {
-	color: #026202;
+	color: #185C2F;
 	font-size: 48px;
 }
 .details {
-	color: #026202;
+	color: #185C2F;
 	font-size: 48px;
 	border: none;
 	background-color: rgba(0,0,0,0);
 	margin-top: 0.2em;
+}
+.details:hover {
+	text-shadow: 0 0 10px #aaa;
 }
 .info-icon {
 	font-size: 48px;
@@ -293,15 +296,15 @@ select {
 	z-index: 100;
 }
 .close-button {
-	background-color: #026202;
-		border: none;
-		border-radius: 50%;
-		color: #fff;
-		position: absolute;
-		right: -1em;
-		top: -0.7em;
-		height: 24px;
-		box-shadow: 0 5px 10px #000;
+	background-color: #07401A;
+	border: none;
+	border-radius: 50%;
+	color: #fff;
+	position: absolute;
+	right: -1em;
+	top: -0.7em;
+	height: 24px;
+	box-shadow: 0 5px 10px #000;
 }
 .details-container {
 	display: flex;
@@ -328,7 +331,7 @@ select {
 	text-align: center;
 	padding: 1em;
 	color: #fff;
-	background-color: #026202;
+	background-color: #07401A;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 0.5em;
@@ -342,7 +345,7 @@ select {
 	font-size: 1em;
 	font-weight: bold;
 	color: #fff;
-	background-color: #4d7203;
+	background-color: #185C2F;
 	border: none;
 }
 .preview a {
@@ -362,7 +365,7 @@ select {
 }
 .details-header {
 	text-align: center;
-	color: #026202;
+	color: #185C2F;
 	font-size: 1.5em;
 	border-bottom: solid 1px #aaa;
 	padding-bottom: 0.8em;
