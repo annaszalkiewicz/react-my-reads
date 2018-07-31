@@ -1,15 +1,16 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "My Reads App",
+  "short_name": "My Reads",
+  "start_url": "/my-reads/index.html",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "icon.svg",
+      "sizes": "48x48" "96x96" "128x128" "144x144" "192x192" "256x256" "384x384" "512x512",
+      "type": "image/svg"
     }
   ],
-  "start_url": "./index.html",
+  "background_color": "#4c9063",
+  "theme_color": "#185c2f",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait"
 }
