@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Header(props) {
+const Header = (() => {
 	return (
 		<header className="App-header">
 			<div className="overlay"></div>
@@ -10,5 +10,5 @@ function Header(props) {
 			</div>
 		</header>
 	);
-}
+});
 export default Header;
