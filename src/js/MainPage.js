@@ -23,10 +23,10 @@ const MainPage = ({books, changeShelf}) => {
 
 			<Tabs>
 
-				<TabList>
-					<Tab>Currently Reading</Tab>
-					<Tab>Want To Read</Tab>
-					<Tab>Read</Tab>
+				<TabList className="tabs">
+					<Tab className="tab-header">Currently Reading</Tab>
+					<Tab className="tab-header">Want To Read</Tab>
+					<Tab className="tab-header">Read</Tab>
 				</TabList>
 				
 				<TabPanel>

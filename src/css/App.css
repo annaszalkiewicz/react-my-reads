@@ -28,7 +28,7 @@
 	height: 100%;
 	width: 100%;
 	opacity: 0.8;
-	background-color: #026202;
+	background-color: #07401A;
 }
 
 .App-title {
@@ -69,7 +69,7 @@
 	position: absolute;
 	background: none;
 	border: none;
-	color: #002500;
+	color: #00260D;
 	right: 2em;
 	top: 33em;
 	z-index: 1;
@@ -130,15 +130,27 @@
 }
 
 /* MAIN PAGE */
-.shelf {
-	position: relative;
-	margin-top: 1em;
-	z-index: 0;
-}
-.shelf-heading {
-	padding: 1em;
-	background-color: #4d7203;
+
+.tab-header {
+	text-align: center;
+	list-style-type: none;
+	display: inline-block;
+	width: 30%;
+	background-color: #185C2F;
 	color: #fff;
+	font-size: 1.5em;
+	padding: 1em;
+	margin: 0.5em;
+	box-shadow: 0 10px 20px #aaa;
+}
+.tab-header:hover {
+	cursor: pointer;
+	background-color: #4C9063;
+	box-shadow: 0 0 5px #aaa;
+	transition: all 1s ease;
+}
+.tab-header:active, .tab-header:focus, .tab-header::selection {
+	background-color: #2E7245;
 }
 
 /* BOOK DETAILS */
@@ -242,7 +254,7 @@ select {
 /* FOOTER */
 
 .footer {
-	background-color: #026202;
+	background-color: #07401A;
 	color: #fff;
 	padding: 2em;
 	margin-top: 1em;
