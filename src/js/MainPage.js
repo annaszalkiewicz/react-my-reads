@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 // eslint-disable-next-line 
 import BooksList from './BooksList';
+// eslint-disable-next-line 
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import '../css/App.css';
 
@@ -17,50 +19,56 @@ const MainPage = ({books, changeShelf}) => {
 				</button>
 			</Link>
 
-			<section id="currently-reading" className="shelf">
-				<h2 className="shelf-heading">Currently Reading</h2>
-				<ul className="books-list">
-					{books.filter(book => book.shelf === 'currentlyReading').map((book) => (
-						<li key={book.id} className="book-item">
-							<BooksList
-								book={book}
-								changeShelf={changeShelf}
-								currentShelf="currentlyReading"
-							/>
-						</li>
-					))}
-				</ul>
-			</section>
+			<Tabs>
 
-			<section id="want-to-read" className="shelf">
-				<h2 className="shelf-heading">Want To Read</h2>
-				<ul className="books-list">
-					{books.filter(book => book.shelf === 'wantToRead').map((book) => (
-						<li key={book.id} className="book-item">
-							<BooksList
-								book={book}
-								changeShelf={changeShelf}
-								currentShelf="wantToRead"
-							/>
-						</li>
-					))}
-				</ul>
-			</section>
+				<TabList>
+					<Tab>Currently Reading</Tab>
+					<Tab>Want To Read</Tab>
+					<Tab>Read</Tab>
+				</TabList>
+				
+				<TabPanel>
+					<ul className="books-list">
+						{books.filter(book => book.shelf === 'currentlyReading').map((book) => (
+							<li key={book.id} className="book-item">
+								<BooksList
+									book={book}
+									changeShelf={changeShelf}
+									currentShelf="currentlyReading"
+								/>
+							</li>
+						))}
+					</ul>
+				</TabPanel>
 
-			<section id="read" className="shelf">
-				<h2 className="shelf-heading">Read</h2>
-				<ul className="books-list">
-					{books.filter(book => book.shelf === 'read').map((book) => (
-						<li key={book.id} className="book-item">
-							<BooksList
-								book={book}
-								changeShelf={changeShelf}
-								currentShelf="read"
-							/>
-						</li>
-					))}
-				</ul>
-			</section>
+				<TabPanel>
+					<ul className="books-list">
+						{books.filter(book => book.shelf === 'wantToRead').map((book) => (
+							<li key={book.id} className="book-item">
+								<BooksList
+									book={book}
+									changeShelf={changeShelf}
+									currentShelf="wantToRead"
+								/>
+							</li>
+						))}
+					</ul>
+				</TabPanel>
+
+				<TabPanel>
+					<ul className="books-list">
+						{books.filter(book => book.shelf === 'read').map((book) => (
+							<li key={book.id} className="book-item">
+								<BooksList
+									book={book}
+									changeShelf={changeShelf}
+									currentShelf="read"
+								/>
+							</li>
+						))}
+					</ul>
+				</TabPanel>
+			</Tabs>
 
 		</main>
 	);
