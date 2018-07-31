@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import * as BooksAPI from '../utils/BooksAPI'
 
-import '../css/App.css';
-
 class SearchPage extends Component {
 
 	state = {
@@ -21,7 +19,7 @@ class SearchPage extends Component {
 			BooksAPI.search(query).then((foundBooks) => {
 				if (foundBooks.length) {
 					this.setState({ foundBooks })
-					
+
 				}
 				else {
 					this.setState({ foundBooks: [] });
@@ -66,7 +64,7 @@ class SearchPage extends Component {
 					<section id="found-books" className="found-books">
 						<ul className="books-list">
 							{foundBooks.map((foundBook) => {
-								let shelf="none";
+								let shelf = "none";
 
 								books.map(book => (
 									book.id === foundBook.id ? shelf = book.shelf : 'none'
@@ -80,7 +78,7 @@ class SearchPage extends Component {
 										/>
 									</li>
 								);
-				})}
+							})}
 						</ul>
 					</section>
 				)}

@@ -8,13 +8,11 @@ import BooksList from './BooksList';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import PropTypes from 'prop-types';
 
-import '../css/App.css';
-
-const MainPage = ({books, changeShelf}) => {
+const MainPage = ({ books, changeShelf }) => {
 
 	return (
 		<main>
-			<Link 
+			<Link
 				to={process.env.PUBLIC_URL + './search'}
 				className='add-book'>
 				<button className="submit">
@@ -29,7 +27,7 @@ const MainPage = ({books, changeShelf}) => {
 					<Tab className="tab-header">Want To Read</Tab>
 					<Tab className="tab-header">Read</Tab>
 				</TabList>
-				
+
 				<TabPanel>
 					<ul className="books-list">
 						{books.filter(book => book.shelf === 'currentlyReading').map((book) => (

@@ -1,10 +1,12 @@
+// eslint-disable-next-line
 import React, { Component } from 'react';
+// eslint-disable-next-line
 import Shelf from './Shelf';
+// eslint-disable-next-line
 import Modal from 'react-modal';
 import PropTypes from 'prop-types';
 import '../img/info-icon.svg';
 import Placeholder from '../img/placeholder.png';
-import '../css/App.css';
 
 class BooksList extends Component {
 
@@ -42,6 +44,7 @@ class BooksList extends Component {
 						<button className="details" onClick={this.openModal}>
 							<i className="material-icons info-icon">info</i>
 						</button>
+
 						<Modal
 							isOpen={this.state.modalIsOpen}
 							onRequestClose={this.closeModal}
@@ -64,7 +67,7 @@ class BooksList extends Component {
 								</div>
 								<div className="details-right">
 									<h2 className="details-header">{book.title ? book.title : ''}</h2>
-									<h3 className="details-subtitle">{ book.subtitle ? book.subtitle : ''}</h3>
+									<h3 className="details-subtitle">{book.subtitle ? book.subtitle : ''}</h3>
 
 									<table className="details-table">
 										<tbody>
@@ -102,6 +105,7 @@ class BooksList extends Component {
 							changeShelf={changeShelf}
 							currentShelf={currentShelf}
 						/>
+
 					</div>
 				</div>
 			</div>

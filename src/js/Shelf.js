@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import '../css/App.css';
 import '../img/more-icon.svg';
 
 const Shelf = ({changeShelf, currentShelf, book}) => {
