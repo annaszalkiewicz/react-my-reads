@@ -387,11 +387,7 @@ select {
 	padding: 1em;
 	text-align: justify;
 }
-@media screen and (min-width: 400px) {
-	.App-header {
-		height: 60vh;
-	}
-}
+
 @media screen and (min-width: 768px) {
 	.App-header {
 		height: 320px;
