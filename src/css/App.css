@@ -424,4 +424,25 @@ select {
 	.App-header {
 		height: 320px;
 	}
+	.submit {
+		top: 20em;
+	}
+	.Modal {
+		position: fixed;
+		top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	}
+	.close-search {
+		left: 1em;
+	}
+	.arrow-back {
+		font-size: 48px;
+	}
 }
+@media screen and (min-width: 900px) {
+	.tab-header {
+		width: 30%;
+		padding: 1em;
+	}
+} 
