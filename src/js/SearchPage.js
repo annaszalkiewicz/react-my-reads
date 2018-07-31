@@ -45,7 +45,7 @@ class SearchPage extends Component {
 
 			<main>
 				<Link
-					to='/'
+					to={process.env.PUBLIC_URL + '/'}
 					className='close-search'
 				>
 					<i className="material-icons arrow-back">arrow_back</i>

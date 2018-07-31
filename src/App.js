@@ -39,7 +39,7 @@ class App extends Component {
 			<div className="App">
 				<Header/>
 				<Route exact
-					path="/"
+					path={process.env.PUBLIC_URL + "/"}
 					render={() => (
 						<MainPage
 						books = {books}
@@ -48,7 +48,7 @@ class App extends Component {
 					)}
 				/>
 				<Route
-					path="/search"
+					path={ process.env.PUBLIC_URL + "/search"}
 					render={() => (
 						<SearchPage
 							books = {this.state.books}
