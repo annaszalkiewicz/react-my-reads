@@ -26,7 +26,7 @@ class BooksList extends Component {
 	}
 
 	render() {
-		const { book, changeShelf } = this.props;
+		const { book, changeShelf, currentShelf } = this.props;
 
 		return (
 			<div className="book-container">
@@ -100,6 +100,7 @@ class BooksList extends Component {
 						<Shelf
 							book={book}
 							changeShelf={changeShelf}
+							currentShelf={currentShelf}
 						/>
 					</div>
 				</div>

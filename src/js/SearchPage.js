@@ -9,36 +9,37 @@ import '../css/App.css';
 class SearchPage extends Component {
 
 	state = {
-    query: '',
+		query: '',
 		books: [],
 		foundBooks: [],
-}
+	}
 
-  updateQuery = (query) => {
-    this.setState({ query: query });
+	updateQuery = (query) => {
+		this.setState({ query: query });
 
-    if (query) {
-      BooksAPI.search(query).then((foundBooks) => {
-        if (foundBooks.length) {
+		if (query) {
+			BooksAPI.search(query).then((foundBooks) => {
+				if (foundBooks.length) {
 					this.setState({ foundBooks })
-					foundBooks.map(book => (this.state.books.filter((b) => b.id === book.id).map(b => book.shelf = b.shelf)))
-        }
-        else {
-          this.setState({ foundBooks: [] });
-        }
-      })
-    }
-    else {
-      this.setState({ foundBooks: [] });
-    }
-  }
+					
+				}
+				else {
+					this.setState({ foundBooks: [] });
+				}
+			})
+		}
+		else {
+			this.setState({ foundBooks: [] });
+		}
+	}
 
-  clearQuery = () => {
-    this.setState({ query: '' })
-  }
+	clearQuery = () => {
+		this.setState({ query: '' })
+	}
 
 	render() {
 		const { query, foundBooks } = this.state;
+		const { books } = this.props;
 
 		return (
 
@@ -64,13 +65,22 @@ class SearchPage extends Component {
 				{foundBooks.length !== 0 && query.length !== 0 && (
 					<section id="found-books" className="found-books">
 						<ul className="books-list">
-							{foundBooks.map((book) => (
-								<li key={book.id} className="book-item">
-									<BooksList
-										book = {book}
-									/>
-								</li>
-							))}
+							{foundBooks.map((foundBook) => {
+								let shelf="none";
+
+								books.map(book => (
+									book.id === foundBook.id ? shelf = book.shelf : 'none'
+								))
+								return (
+									<li key={foundBook.id} className="book-item">
+										<BooksList
+											book={foundBook}
+											changeShelf={this.props.changeShelf}
+											currentShelf={shelf}
+										/>
+									</li>
+								);
+				})}
 						</ul>
 					</section>
 				)}

@@ -51,7 +51,7 @@ class App extends Component {
 					path="/search"
 					render={() => (
 						<SearchPage
-							books = {books}
+							books = {this.state.books}
 							foundBooks = {foundBooks}
 							query = {query}
 							changeShelf = {this.changeShelf}

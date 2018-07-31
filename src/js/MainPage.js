@@ -26,6 +26,7 @@ class MainPage extends Component {
 								<BooksList
 									book={book}
 									changeShelf={changeShelf}
+									currentShelf="currentlyReading"
 								/>
 							</li>
 						))}
@@ -40,6 +41,7 @@ class MainPage extends Component {
 								<BooksList
 									book={book}
 									changeShelf={changeShelf}
+									currentShelf="wantToRead"
 								/>
 							</li>
 						))}
@@ -54,6 +56,7 @@ class MainPage extends Component {
 								<BooksList
 									book={book}
 									changeShelf={changeShelf}
+									currentShelf="read"
 								/>
 							</li>
 						))}
