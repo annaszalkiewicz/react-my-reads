@@ -13,7 +13,7 @@ const MainPage = ({ books, changeShelf }) => {
 	return (
 		<main>
 			<Link
-				to={process.env.PUBLIC_URL + './search'}
+				to={process.env.PUBLIC_URL + '/search'}
 				className='add-book'>
 				<button className="submit">
 					<i className="material-icons add-book-icon">add_circle</i>
