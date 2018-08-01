@@ -25,7 +25,6 @@ class App extends Component {
 	
 	changeShelf = (book, shelf) => {
 		BooksAPI.update(book, shelf).then(() => {
-			{console.log(this.state.books)}
 			this.updateBooks();
 		})
 	}
