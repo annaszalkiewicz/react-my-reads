@@ -97,7 +97,6 @@ class SearchPage extends Component {
 
 SearchPage.propTypes = {
 	books: PropTypes.array.isRequired,
-	foundBooks: PropTypes.array.isRequired,
 	query: PropTypes.string.isRequired
 };
 
