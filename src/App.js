@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import Header from './js/Header';
 import Footer from './js/Footer';
 import MainPage from './js/MainPage';
@@ -64,12 +63,5 @@ class App extends Component {
 		);
 	}
 }
-
-App.propTypes = {
-	books: PropTypes.array.isRequired,
-	foundBooks: PropTypes.array.isRequired,
-	changeShelf: PropTypes.func.isRequired,
-	query: PropTypes.string.isRequired
-};
 
 export default App;

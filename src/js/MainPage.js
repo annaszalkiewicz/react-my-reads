@@ -78,9 +78,7 @@ const MainPage = ({ books, changeShelf }) => {
 
 MainPage.propTypes = {
 	books: PropTypes.array.isRequired,
-	book: PropTypes.object.isRequired,
 	changeShelf: PropTypes.func.isRequired,
-	currentShelf: PropTypes.string.isRequired
 };
 
 export default MainPage;
