@@ -22,6 +22,7 @@ class BooksList extends Component {
 	}
 
 	openModal() {
+		Modal.setAppElement('#root');
 		this.setState({ modalIsOpen: true });
 	}
 
