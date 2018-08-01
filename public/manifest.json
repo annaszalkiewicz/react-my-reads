@@ -1,7 +1,7 @@
 {
   "name": "My Reads App",
   "short_name": "My Reads",
-  "start_url": "/my-reads/index.html",
+  "start_url": "/my-reads-app/index.html",
   "icons": 
     [ 
       {
