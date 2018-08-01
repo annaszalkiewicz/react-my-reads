@@ -10,8 +10,6 @@ import './css/App.css';
 class App extends Component {
 	state = {
 		books: [],
-		foundBooks: [],
-		currentBooks: [],
 		query: ''
 	}
 
