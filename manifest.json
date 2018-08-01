@@ -2,13 +2,18 @@
   "name": "My Reads App",
   "short_name": "My Reads",
   "start_url": "/my-reads/index.html",
-  "icons": [
-    {
-      "src": "icon.svg",
-      "sizes": "48x48" "96x96" "128x128" "144x144" "192x192" "256x256" "384x384" "512x512",
-      "type": "image/svg"
-    }
-  ],
+  "icons": 
+    { 
+      "16": "icon.svg",
+      "48": "icon.svg",
+      "96": "icon.svg",
+      "128": "icon.svg",
+      "144": "icon.svg",
+      "192": "icon.svg",
+      "256": "icon.svg",
+      "384": "icon.svg",
+      "512": "icon.svg"
+    },
   "background_color": "#4c9063",
   "theme_color": "#185c2f",
   "display": "standalone",
