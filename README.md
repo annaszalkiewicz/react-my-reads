@@ -28,7 +28,7 @@ You can change port by editing `package.json` file. In line 16 `"start": " set P
 
 ### Live preview
 
-[https://annaszalkiewicz.github.io/react-my-reads/](https://annaszalkiewicz.github.io/react-my-reads/)
+[https://mywebgraphicdesign.com/my-reads-app](https://mywebgraphicdesign.com/my-reads-app)
 
 ## Dependencies
 
