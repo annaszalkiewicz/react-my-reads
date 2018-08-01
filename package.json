@@ -1,6 +1,6 @@
 {
 	"homepage": "https://mywebgraphicdesign.com/my-reads-app",
-	"name": "my-reads",
+	"name": "my-reads-app",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
