@@ -54,7 +54,7 @@ class SearchPage extends Component {
 						type="text"
 						id="search-input"
 						className="search-input"
-						placeholder="Seach by author or title"
+						placeholder="Search by author or title"
 						value={query}
 						onChange={(event) => this.updateQuery(event.target.value, foundBooks)}
 					/>
